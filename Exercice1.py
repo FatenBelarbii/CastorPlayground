@@ -1,4 +1,4 @@
-def print_kmers(seq,k):
+def print_kmers_frequency(seq,k):
 	big_list=[]
 	for i in range(len(seq)-k+1):
 		big_list.append(seq[i:i+k])
@@ -9,6 +9,6 @@ def print_kmers(seq,k):
 			counts[s] = 0
 		counts[s] += 1
 	print(counts)
-print_kmers('GATTACA',4)
-print_kmers("MISSISSIPPI",5)
-print_kmers("MISSISSIPPI",3)
+print_kmers_frequency('GATTACA',4)
+print_kmers_frequency("MISSISSIPPI",5)
+print_kmers_frequency("MISSISSIPPI",3)
