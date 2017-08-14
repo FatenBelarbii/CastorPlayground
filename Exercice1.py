@@ -12,3 +12,9 @@ def print_kmers_frequency(seq,k):
 print_kmers_frequency('GATTACA',4)
 print_kmers_frequency("MISSISSIPPI",5)
 print_kmers_frequency("MISSISSIPPI",3)
+
+from Bio import SeqIO
+for seq_record in SeqIO.parse("HBV_genotypes_sample_1.fa", "fasta"):
+    print(seq_record.id)
+    print(repr(seq_record.seq))
+    print(len(seq_record))
